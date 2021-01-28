@@ -22,6 +22,13 @@ class yamlProvider implements Provider
         return $this->db->get($name);
     }
 
+    public function setCoin(Player $player, int $count) : void
+    {
+        $name = $player->getName();
+        $this->db->set($name,$count);
+		$this->db->save();
+    }
+    
     public function isRegister(Player $player) : bool
     {
         $coins = $this->db->get($player->getName());
