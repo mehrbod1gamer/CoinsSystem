@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace onebone\economyapi;
+namespace mehrbod1gamer\Lib\economyapi;
 
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
