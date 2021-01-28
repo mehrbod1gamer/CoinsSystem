@@ -1,0 +1,12 @@
+#how many each coin costs?
+price: 500000
+
+#set update coin price task run time(the time is in minutes)
+time: 0.25
+
+#min and max percent of price update
+min: -20 #means min percent of reduce is 20
+max: 20  #means max percent of increase is 20
+
+#last price change by percent 
+percent: null
