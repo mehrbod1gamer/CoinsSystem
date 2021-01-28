@@ -18,7 +18,6 @@ use mehrbod1gamer\Lib\SimpleForm;
 class main extends PluginBase implements Listener
 {
     private $db;
-    public $runTime;
 
     public function onEnable()
     {
@@ -29,7 +28,6 @@ class main extends PluginBase implements Listener
         $this->reloadConfig();
         $time = $this->getConfig()->get('time') * 20 * 60;
         $this->getScheduler()->scheduleRepeatingTask(new UpdatorTask($this), $time);
-        $this->runTime = time();
         parent::onEnable();
     }
 
