@@ -3,7 +3,7 @@
 namespace mehrbod1gamer;
 
 use mehrbod1gamer\TheTask\UpdatorTask;
-use mehrbod1gamer\Lib\economyapi\EconomyAPI;
+use onebone\economyapi\EconomyAPI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
