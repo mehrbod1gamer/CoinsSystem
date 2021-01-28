@@ -30,13 +30,7 @@ class main extends PluginBase implements Listener
         $this->getScheduler()->scheduleRepeatingTask(new UpdatorTask($this), $time);
         parent::onEnable();
     }
-
-    public function onLoad()
-    {
-        $this->runTime = time();
-        parent::onLoad();
-    }
-
+    
     public function onJoin(PlayerJoinEvent $event)
     {
         $player = $event->getPlayer();
@@ -74,8 +68,6 @@ class main extends PluginBase implements Listener
             }
         });
         $form->setTitle(TextFormat::YELLOW . "Coins");
-        $now   = time() - $this->runTime;
-        $exist = $now/($this->getConfig()->get('time')/60);
         $form->setContent(TextFormat::YELLOW . "Your coins : " . TextFormat::WHITE . $this->db->getCoin($player) . "\n"
         . TextFormat::YELLOW . "Coin Price : " . TextFormat::WHITE . $this->getConfig()->get("price") . $this->getPercent());
         $form->addButton(TextFormat::BLACK . "Buy Coin");
