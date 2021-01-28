@@ -10,4 +10,5 @@ interface Provider
     public function reduceCoin(Player $player, int $count) : void;
     public function isRegister(Player $player) : bool;
     public function giveCoin(Player $player, int $count) : void;
+    public function setCoin(Player $player, int $count) : void;
 }
